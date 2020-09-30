@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %} lokal frettir {% endblock %}
+{% block content %}
+    <main class="row">
+        <section>
+            <h1>
+                hasarferttir
+            </h1>
+        <img src="/static/image1.jpg">
+        </section>
+        <section>
+            <p>
+                {{ item[2] }}
+            </p>
+            <p>
+                {{ item[3] }}
+            </p>
+            <ol>
+                {% for item in frettir %}
+                <li><a href="/frjett/{{ item [0] }}">{{ item [1] }}</a></li>
+                {% endfor %}
+            </ol>
+            
+        </section>
+    </main>
+    <h1>
+        hasarferttir
+    </h1>
+    <p><a href ="/b-hluti"> frettayfirlit</a></p>
+    <p><a href="/a-hluti">verkefni 2.1. dynamisk rap</a></p>
+    <p><a href="/">forsida</a></p>
+{% endblock %}
